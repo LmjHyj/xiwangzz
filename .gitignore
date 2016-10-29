@@ -1,5 +1,6 @@
-./start.sh
-./xiwangzz/settings.py
+db.sqlite3
+
+/xiwangzz/settings.py
 
 ./idea
 
