@@ -1,10 +1,10 @@
 @font-face {
-	font-family: "方正吕建德字体简体";
-	src: url("/static/website/fonts/方正吕建德字体简体.eot"); /* IE9 */
-	src: url("/static/website/fonts/方正吕建德字体简体.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-	url("/static/website/fonts/方正吕建德字体简体.woff") format("woff"), /* chrome, firefox */
-	url("/static/website/fonts/方正吕建德字体简体.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
-	url("/static/website/fonts/方正吕建德字体简体.svg#方正吕建德字体简体") format("svg"); /* iOS 4.1- */
+	font-family: "fzljd";
+	src: url("/static/website/fonts/fzljd.eot"); /* IE9 */
+	src: url("/static/website/fonts/fzljd.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+	url("/static/website/fonts/fzljd.woff") format("woff"), /* chrome, firefox */
+	url("/static/website/fonts/fzljd.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+	url("/static/website/fonts/fzljd.svg#fzljd") format("svg"); /* iOS 4.1- */
 	font-style: normal;
 	font-weight: normal;
 }
