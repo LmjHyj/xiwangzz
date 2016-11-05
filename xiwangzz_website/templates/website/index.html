@@ -3,8 +3,167 @@
 <head>
 	<meta charset="UTF-8">
 	<title>曦望杂志社</title>
+	<link rel="stylesheet" type="text/css" href="/static/website/css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="/static/website/css/index.css" />
+	<script src="/static/website/js/jquery-1.8.3.min.js"></script>
+	<script src="/static/website/js/jquery.fullPage.min.js"></script>
 </head>
 <body>
-	
+	<header id="header">
+		<div class="container">
+			<a href="http://www.xiwangzz.com" class="logo"><img src="/static/website/img/logo.png" alt="logo"></a>
+			<ul class="nav">
+				<li><a href="" class="active">首页</a></li>
+				<li>|</li>
+				<li><a href="">社团简介</a></li>
+				<li>|</li>
+				<li><a href="">杂志阅读</a></li>
+				<li>|</li>
+				<li><a href="">联系我们</a></li>
+			</ul>
+		</div>
+	</header>
+	<div id="fullpage">
+		<div class="section">
+			<img src="/static/website/img/index_section1_text.png" alt="两年" style="position: absolute;top:60%;left: 50%;transform: translate(-50%,-50%);">
+		</div>
+		<div class="section">
+			<div style="text-align: center;padding-top: 100px;">
+				<img src="/static/website/img/index_section2_img.png" alt="2016年10月31号">
+				<img src="/static/website/img/index_section2_text.png" alt="暮然回忆">
+			</div>
+		</div>
+		<div class="section">
+
+			<div class="flipster" style="visibility: visible; display: block;">
+				<ul class="flip-items">
+					<li class="flip-item flip-hidden">
+						<a href="javascript:;">
+							<img src="/static/website/img/index_section3_img1.png">
+						</a>
+					</li>
+					<li class="flip-item flip-hidden">
+						<a href="javascript:;">
+							<img src="/static/website/img/index_section3_img2.png">
+						</a>
+					</li>
+					<li class="flip-item flip-hidden">
+						<a href="javascript:;">
+							<img src="/static/website/img/index_section3_img3.png">
+						</a>
+					</li>
+					<li class="flip-item flip-hidden">
+						<a href="javascript:;">
+							<img src="/static/website/img/index_section3_img1.png">
+						</a>
+					</li>
+					<li class="flip-item flip-hidden">
+						<a href="javascript:;">
+							<img src="/static/website/img/index_section3_img2.png">
+						</a>
+					</li>
+					<li class="flip-item flip-hidden">
+						<a href="javascript:;">
+							<img src="/static/website/img/index_section3_img3.png">
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+
+			<div class="footer">
+				<div class="line"></div>
+				<img src="/static/website/img/qr_code.png" alt="qrcode" class="qrcode">
+				<span style="margin: 20px;display: block;">微信号：曦望杂志社</span>
+				<span style="float: right;">Copyright 2016 xiwangzz.com All Rights Reserved</span>
+			</div>
+		</div>
+	</div>
+	<div id="fullpage_navigation">
+		<ul>
+			<li class="active"><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+			<li><a href="javascript:;"></a></li>
+		</ul>
+	</div>
 </body>
+<script>
+	$(document).ready(function() {
+		$('#fullpage').fullpage({
+			css3: true,
+        	scrollingSpeed: 1500,
+			onLeave: function(index, nextIndex, direction){
+				if(nextIndex===1){
+					$("#header").removeClass("oneline");
+				}else{
+					$("#header").addClass("oneline");
+				}
+				$("#fullpage_navigation li").removeClass("active");
+				$("#fullpage_navigation li").eq(nextIndex-1).addClass("active");
+			}
+		});
+
+		$("#fullpage_navigation li").click(function(event){
+			var index = $("#fullpage_navigation li a").index($(event.target))+1;
+			$.fn.fullpage.moveTo(index);
+		});
+	});
+
+	$(function(){
+
+		$.fn.flipster = function() {
+			var _flipster = $(this),
+				_flipItemsOuter = _flipster.find('ul'),
+				_flipItems = _flipItemsOuter.find('li'),
+				_current = 0,
+				win = $(window);
+
+
+			var api = {};
+			api.init = function(){
+				_flipster.addClass("flipster flipster-active").css("visibility","hidden");
+				_flipItemsOuter.addClass("flip-items");
+				_flipItems.addClass("flip-item flip-hidden").wrapInner("<div class='flip-content' />");
+
+				_flipster.hide().css("visibility","visible").fadeIn(400,function(){ api.center(); });
+
+				_flipItems.on("click", function(e) {
+					if(!$(this).hasClass("flip-current")){ e.preventDefault(); }
+					api.jump(_flipItems.index(this));
+				});
+
+			};
+			
+			api.center = function(){
+				var currentItem = $(_flipItems[_current]).addClass("flip-current");
+				_flipItems.removeClass("flip-prev flip-next flip-current flip-past flip-future no-transition");
+
+				_flipItems.addClass("flip-hidden");
+				var nextItem = $(_flipItems[_current+1]),
+					prevItem = $(_flipItems[_current-1]);
+
+				
+				if ( _current === 0 ) {
+					prevItem = _flipItems.last();
+				}else if ( _current === _flipItems.length-1 ) {
+					nextItem = _flipItems.first();
+				}
+				nextItem.removeClass("flip-hidden").addClass("flip-next");
+				prevItem.removeClass("flip-hidden").addClass("flip-prev");
+
+				currentItem.addClass("flip-current").removeClass("flip-prev flip-next flip-past flip-future flip-hidden");
+
+			};
+			api.jump = function(index){
+				_current = index;
+				api.center();
+			};
+			if(!_flipster.hasClass("flipster-active")){api.init();}
+		};
+
+		$(".flipster").each(function(){
+			$(this).flipster();
+		})
+	});
+</script>
 </html>

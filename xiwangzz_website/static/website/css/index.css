@@ -1,0 +1,146 @@
+@font-face {
+	font-family: "方正吕建德字体简体";
+	src: url("/static/website/fonts/方正吕建德字体简体.eot"); /* IE9 */
+	src: url("/static/website/fonts/方正吕建德字体简体.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+	url("/static/website/fonts/方正吕建德字体简体.woff") format("woff"), /* chrome, firefox */
+	url("/static/website/fonts/方正吕建德字体简体.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+	url("/static/website/fonts/方正吕建德字体简体.svg#方正吕建德字体简体") format("svg"); /* iOS 4.1- */
+	font-style: normal;
+	font-weight: normal;
+}
+
+#header{
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+	text-align: center;
+}
+#header .container{
+	max-width: 1200px;
+	margin:0 auto;
+	position: relative;
+}
+#header .logo{
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: all 1s linear;
+}
+#header.oneline .logo{
+	left: 0;
+	transform: translateX(0) scale(0.5);
+}
+
+#header .nav{
+	transform: translateY(180px);
+	transition: transform 1s linear;
+}
+#header .nav li{
+	list-style: none;
+	display: inline-block;
+	margin:0 30px;
+}
+#header .nav li a{
+	color: #000;
+	text-decoration: none;
+	font-family: "方正吕建德字体简体";
+	padding:3px 10px;
+}
+#header .nav li a.active{
+	background-image: url('/static/website/img/hover.png');
+	background-size: 100% 100%;
+	color:#fff;
+}
+#header.oneline .nav{
+	transform: translateY(80px);
+}
+
+
+#fullpage .section{
+	background-size:cover;
+	background-position: center;
+}
+#fullpage .section:nth-child(1){
+	background-image: url('/static/website/img/index_section1_bg.png');
+}
+#fullpage .section:nth-child(2){
+	background-image: url('/static/website/img/index_section2_bg.png');
+}
+#fullpage .section:nth-child(3){
+	background-image: url('/static/website/img/bg_texture.png');
+}
+.footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 200px;
+	max-width: 1200px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.footer .line{
+	margin:0 auto;
+	max-width: 1200px;
+	height: 16px;
+	background: url('/static/website/img/line.png');
+	background-size: 100% 100%;
+}
+.footer .qrcode{
+	float: left;
+	margin-top: -10px;
+	margin-left: 100px;
+}
+
+
+
+#fullpage_navigation{
+	width: 100%;
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+}
+#fullpage_navigation ul{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+#fullpage_navigation li{
+	list-style: none;
+}
+#fullpage_navigation li a{
+	width: 10px;
+	height: 13px;
+	display: block;
+	background-image: url('/static/website/img/navigation.png');
+	margin:30px; 
+	pointer-events: all;
+}
+#fullpage_navigation li.active a{
+	width: 13px;
+	height: 19px;
+	background-image: url('/static/website/img/navigation_active.png');
+}
+
+.flipster{position: absolute;left:50%;}
+.flip-items{margin:0 auto;padding:0;list-style-type:none;display:block;}
+.flip-items,.flip-item{margin:0 auto;padding:0;list-style-type:none;display:block;transform: translate(0,-50%);}
+.flip-item{margin:0 auto;position:absolute;list-style-type:none;display:block;padding:0;-ms-transition:all 350ms ease-out;-o-transition:all 350ms ease-out;transition:all 350ms ease-out;-moz-transition:all 350ms ease-out;-webkit-transition:all 350ms ease-out;}
+.flip-item.flip-prev{transform: translate(-200%,-50%) scale(0.8);-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter: gray;}
+.flip-prev,.flip-next{-webkit-transition-delay:58.333333333333336ms;transition-delay:58.333333333333336ms;z-index:2;-moz-transition-delay:58.333333333333336ms;-o-transition-delay:58.333333333333336ms;}
+.flip-next{-webkit-transition-delay:58.333333333333336ms;transition-delay:58.333333333333336ms;z-index:2;-moz-transition-delay:58.333333333333336ms;-o-transition-delay:58.333333333333336ms;}
+.flip-item.flip-next{transform: translate(200%,-50%) scale(0.8);-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter: gray;}
+.flip-item.flip-current{visibility:visible;z-index: 1000;}
+.flip-current{transform: translate(0,-50%);}
+.flip-prev{-webkit-transition-delay:58.333333333333336ms;transition-delay:58.333333333333336ms;z-index:2;-moz-transition-delay:58.333333333333336ms;-o-transition-delay:58.333333333333336ms;}
+.flip-hidden{visibility:hidden;}
+.flip-current .tcenter{opacity:1;}
+
+
+.flipster ul{position:relative;list-style-type:none;}
+.flipster ul li{position:absolute;top:0;left:0;}
+.flipster ul li,.flipster ul li a{display:block;}
+
+.flipster ul li a{width:200px;height:300px;display:block;}
+.flipster ul li a img{width:100%;height:100%;}
