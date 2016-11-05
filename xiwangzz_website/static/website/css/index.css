@@ -123,14 +123,14 @@
 	background-image: url('/static/website/img/navigation_active.png');
 }
 
-.flipster{position: absolute;left:50%;}
+.flipster{position: absolute;left:45%;}
 .flip-items{margin:0 auto;padding:0;list-style-type:none;display:block;}
 .flip-items,.flip-item{margin:0 auto;padding:0;list-style-type:none;display:block;transform: translate(0,-50%);}
 .flip-item{margin:0 auto;position:absolute;list-style-type:none;display:block;padding:0;-ms-transition:all 350ms ease-out;-o-transition:all 350ms ease-out;transition:all 350ms ease-out;-moz-transition:all 350ms ease-out;-webkit-transition:all 350ms ease-out;}
-.flip-item.flip-prev{transform: translate(-200%,-50%) scale(0.8);-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter: gray;}
+.flip-item.flip-prev{padding-right:100px;transform: translate(-100%,-50%) scale(0.8);-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter: gray;}
 .flip-prev,.flip-next{-webkit-transition-delay:58.333333333333336ms;transition-delay:58.333333333333336ms;z-index:2;-moz-transition-delay:58.333333333333336ms;-o-transition-delay:58.333333333333336ms;}
 .flip-next{-webkit-transition-delay:58.333333333333336ms;transition-delay:58.333333333333336ms;z-index:2;-moz-transition-delay:58.333333333333336ms;-o-transition-delay:58.333333333333336ms;}
-.flip-item.flip-next{transform: translate(200%,-50%) scale(0.8);-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter: gray;}
+.flip-item.flip-next{padding-left:40px;transform: translate(100%,-50%) scale(0.8);-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter: gray;}
 .flip-item.flip-current{visibility:visible;z-index: 1000;}
 .flip-current{transform: translate(0,-50%);}
 .flip-prev{-webkit-transition-delay:58.333333333333336ms;transition-delay:58.333333333333336ms;z-index:2;-moz-transition-delay:58.333333333333336ms;-o-transition-delay:58.333333333333336ms;}
