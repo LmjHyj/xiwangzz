@@ -9,17 +9,17 @@
 	<script src="/static/website/js/jquery.fullPage.min.js"></script>
 </head>
 <body>
-	<header id="header">
+	<header id="header" style="position: absolute;">
 		<div class="container">
 			<a href="http://www.xiwangzz.com" class="logo"><img src="/static/website/img/logo.png" alt="logo"></a>
 			<ul class="nav">
 				<li><a href="#" class="active">首页</a></li>
 				<li>|</li>
-				<li><a href="">社团简介</a></li>
+				<li><a href="/about">社团简介</a></li>
 				<li>|</li>
-				<li><a href="">杂志阅读</a></li>
+				<li><a href="/magzine">杂志阅读</a></li>
 				<li>|</li>
-				<li><a href="/about">联系我们</a></li>
+				<li><a href="/contact">联系我们</a></li>
 			</ul>
 		</div>
 	</header>
@@ -28,9 +28,9 @@
 			<img src="/static/website/img/index_section1_text.png" alt="两年" style="position: absolute;top:60%;left: 50%;transform: translate(-50%,-50%);">
 		</div>
 		<div class="section">
-			<div style="text-align: center;padding-top: 100px;">
-				<img src="/static/website/img/index_section2_img.png" alt="2016年10月31号">
-				<img src="/static/website/img/index_section2_text.png" alt="暮然回忆">
+			<div style="text-align: center;padding-top: 100px;padding-left: 30px;">
+				<img src="/static/website/img/index_section2_img.png" alt="2016年10月31号" style="max-width:45%;  ">
+				<img src="/static/website/img/index_section2_text.png" alt="暮然回忆" style="max-width:45%;">
 			</div>
 		</div>
 		<div class="section">
@@ -70,7 +70,10 @@
 				</ul>
 			</div>
 			
-			{% include 'website/footer.html' %}
+			<div style="position: absolute;width: 100%;bottom: 0;">
+				{% include 'website/footer.html' %}
+			</div>
+			
 		</div>
 	</div>
 	<div id="fullpage_navigation">
