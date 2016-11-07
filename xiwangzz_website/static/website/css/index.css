@@ -9,6 +9,13 @@
 	font-weight: normal;
 }
 
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url('/static/website/img/bg_texture.png');
+}
 #header{
 	position: absolute;
 	width: 100%;
