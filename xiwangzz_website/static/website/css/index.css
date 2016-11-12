@@ -92,6 +92,7 @@ body{
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
+	font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
 }
 .footer .line{
 	margin:0 auto;
