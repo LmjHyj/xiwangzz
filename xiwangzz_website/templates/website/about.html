@@ -5,6 +5,14 @@
 	<title>曦望杂志社</title>
 	<link rel="stylesheet" type="text/css" href="/static/website/css/index.css" />
 	<script src="/static/website/js/jquery-1.8.3.min.js"></script>
+	<style>
+		.section p {
+			line-height: 30px;
+		} 
+		.section img{
+			margin:20px;
+		}
+	</style>
 </head>
 <body>
 	<header id="header">
@@ -22,7 +30,7 @@
 		</div>
 	</header>
 	
-	<div class="section" style="text-align: center;padding-top: 100px;padding-left: 30px;">
+	<div class="section" style="text-align: center;padding-left: 30px;margin:40px 0;">
 		<img src="/static/website/img/about_img1.png" alt="梦想启程">
 		<p>
 			从一无所有到一家精英云集的大型社团，<br>
@@ -39,7 +47,9 @@
 			我们愿意和你一起努力，一起成长！
 		</p>
 
-		<p>风|雨|再|大 不|忘|初|心</p>
+		<p style="margin-top:30px;letter-spacing: 20px;">
+            风|雨|再|大&nbsp;&nbsp;&nbsp;&nbsp;不|忘|初|心
+        </p>
 	</div>
 
 	{% include 'website/footer.html' %}
