@@ -5,7 +5,9 @@
 	<link rel="SHORTCUT ICON" href="/static/website/favicon.ico">
 	<title>曦望杂志社</title>
 	<link rel="stylesheet" type="text/css" href="/static/website/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="/static/website/css/book.css" />
 	<script src="/static/website/js/jquery-1.8.3.min.js"></script>
+	<script src="/static/website/js/turn.min.js"></script>
 </head>
 <body>
 	<header id="header">
@@ -23,12 +25,34 @@
 		</div>
 	</header>
 
+	<div id="canvas">
+		<div id="book-zoom">
+			<div class="sj-book">
+				<div depth="5" class="hard"><div class="side"></div></div>
+				<div depth="5" class="hard front-side"><div class="depth"></div></div>
+				<div class="own-size"></div>
+				<div class="own-size even"></div>
+				<div class="hard fixed back-side p111"> <div class="depth"></div> </div>
+				<div class="hard p112"></div>
+			</div>
+		</div>
+		<div id="slider-bar" class="turnjs-slider">
+			<div id="slider"></div>
+		</div>
+	</div>
+
 	{% include 'website/footer.html' %}
 </body>
 <script>
 	$(document).ready(function() {
-	
+		var flipbook = $('.sj-book');
+		flipbook.turn({
+			elevation: 50,
+			autoCenter: true,
+			gradients: true,
+			duration: 1000,
+			pages: 112,
+		});
 	});
-
 </script>
 </html>
