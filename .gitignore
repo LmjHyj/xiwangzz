@@ -1,4 +1,6 @@
 db.sqlite3
+apache.conf
+xiwangzz.conf
 
 /xiwangzz/settings.py
 
